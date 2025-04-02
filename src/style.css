@@ -96,7 +96,7 @@ a:hover {
 /* Hero section */
 .hero {
   height: 600px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/images/hero-temple.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/images/Puja.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
