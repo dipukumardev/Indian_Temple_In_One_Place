@@ -1,0 +1,1025 @@
+/* Global styles */
+:root {
+    --primary-color: #ff6b35;
+    --secondary-color: #f98866;
+    --accent-color: #ffd151;
+    --background-color: #f7f7f2;
+    --text-color: #333;
+    --header-color: #5e2401;
+    --footer-bg: #2e1a05;
+    --footer-text: #f7f7f2;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  a:hover {
+    color: var(--secondary-color);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header styles */
+  .header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+  
+  .logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--header-color);
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 90px;
+    margin-right: 10px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-menu li {
+    margin-left: 25px;
+  }
+  
+  .nav-menu a {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu a:hover,
+  .nav-menu a.active {
+    color: var(--primary-color);
+  }
+  
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  /* Hero section */
+  .hero {
+    height: 600px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Puja.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+  }
+  
+  /* Utility classes */
+  .text-center {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  /* Temples section */
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--header-color);
+  }
+  
+  .section-title h2 {
+    font-size: 2.2rem;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .section-title h2::after {
+    content: '';
+    height: 3px;
+    width: 80px;
+    background-color: var(--accent-color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .temple-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  
+  .temple-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .temple-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .temple-image {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .temple-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .temple-card:hover .temple-image img {
+    transform: scale(1.1);
+  }
+  
+  .temple-content {
+    padding: 20px;
+  }
+  
+  .temple-content h3 {
+    margin-bottom: 10px;
+    color: var(--header-color);
+  }
+  
+  .temple-content p {
+    margin-bottom: 15px;
+    color: #666;
+  }
+  
+  .temple-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  /* Live Darshan section */
+  .live-darshan {
+    background-color: #f1f1f1;
+    padding: 60px 0;
+    margin-bottom: 50px;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 30px;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Articles section */
+  .article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  
+  .article-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .article-image {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .article-content {
+    padding: 20px;
+  }
+  
+  .article-content h3 {
+    margin-bottom: 10px;
+    color: var(--header-color);
+  }
+  
+  .article-content p {
+    margin-bottom: 15px;
+    color: #666;
+  }
+  
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .read-more {
+    color: var(--primary-color);
+    font-weight: 500;
+  }
+  
+  /* About section */
+  .about-section {
+    padding: 60px 0;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .about-content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+  
+  /* Darshan schedule */
+  .darshan-schedule {
+    margin-top: 40px;
+  }
+  
+  .darshan-schedule h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--header-color);
+  }
+  
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .schedule-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .schedule-item .time {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+  }
+  
+  .schedule-item .ritual {
+    color: #666;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 60px 0 20px;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .footer-logo h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .footer-contact p {
+    margin-bottom: 10px;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .social-links a {
+    color: var(--footer-text);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: var(--accent-color);
+  }
+  
+  .footer-links h3,
+  .footer-newsletter h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: var(--footer-text);
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: var(--accent-color);
+  }
+  
+  .subscribe-form {
+    display: flex;
+    margin-top: 15px;
+  }
+  
+  .subscribe-form input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .subscribe-form button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .subscribe-form button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Temple Details Page */
+  .temple-header {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  
+  .temple-header-image {
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .temple-header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+  }
+  
+  .temple-header-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: -80px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .temple-header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--header-color);
+  }
+  
+  .temple-meta-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+  .meta-item i {
+    color: var(--primary-color);
+    margin-right: 8px;
+  }
+  
+  .temple-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  
+  .content-section {
+    margin-bottom: 30px;
+  }
+  
+  .content-section h2 {
+    color: var(--header-color);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 8px;
+    display: inline-block;
+  }
+  
+  .content-section p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+  }
+  
+  .temple-list {
+    list-style: none;
+    margin-left: 0;
+  }
+  
+  .temple-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .temple-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .temple-sidebar .sidebar-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar-box h3 {
+    color: var(--header-color);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 8px;
+    display: inline-block;
+  }
+  
+  .video-container-small {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 15px;
+  }
+  
+  .video-container-small iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s;
+  }
+  
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+  }
+  
+  .info-list {
+    list-style: none;
+  }
+  
+  .info-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .info-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .info-list li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    min-width: 20px;
+    text-align: center;
+    padding-top: 3px;
+  }
+  
+  .map-container {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .related-temples {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+  }
+  
+  @media (max-width: 992px) {
+    .temple-content-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .temple-header-image {
+      height: 350px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .temple-meta-info {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .temple-header-content h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .hero {
+      height: 450px;
+    }
+  
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      flex-direction: column;
+      background-color: #fff;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px 0;
+    }
+  
+    .nav-menu.active {
+      left: 0;
+    }
+  
+    .nav-menu li {
+      margin: 15px 0;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .temple-grid,
+    .article-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Article Page Styles */
+  .article-header {
+    padding: 60px 0 30px;
+    text-align: center;
+  }
+  
+  .article-meta {
+    margin-bottom: 15px;
+  }
+  
+  .article-category {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #333;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-right: 15px;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
+  .article-date {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .article-date i {
+    margin-right: 5px;
+  }
+  
+  .article-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: var(--header-color);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.3;
+  }
+  
+  .article-author {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .article-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+  }
+  
+  .author-info {
+    text-align: left;
+  }
+  
+  .author-name {
+    display: block;
+    font-weight: 600;
+    color: var(--header-color);
+  }
+  
+  .author-title {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .article-content {
+    padding: 40px 0 80px;
+  }
+  
+  .article-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+  }
+  
+  .article-featured-image {
+    margin-bottom: 30px;
+  }
+  
+  .article-featured-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .article-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  .article-intro {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+  
+  .article-text h2 {
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    color: var(--header-color);
+  }
+  
+  .article-text h3 {
+    font-size: 1.4rem;
+    margin: 30px 0 15px;
+    color: var(--header-color);
+  }
+  
+  .article-text p {
+    margin-bottom: 20px;
+  }
+  
+  .article-text ul, .article-text ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .article-text li {
+    margin-bottom: 10px;
+  }
+  
+  .article-image-with-caption {
+    margin: 30px 0;
+  }
+  
+  .article-image-with-caption img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .image-caption {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+  }
+  
+  .article-tags {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    margin-bottom: 20px;
+  }
+  
+  .article-tags span {
+    font-weight: 600;
+    margin-right: 10px;
+  }
+  
+  .article-tags a {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .article-tags a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  
+  .article-share {
+    margin-bottom: 40px;
+  }
+  
+  .article-share span {
+    font-weight: 600;
+    margin-right: 15px;
+  }
+  
+  .article-share a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #555;
+    text-align: center;
+    line-height: 36px;
+    margin-right: 8px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .article-share a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  
+  .article-author-bio {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .article-author-bio img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+  
+  .author-bio-content h3 {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  .author-bio-content h4 {
+    font-size: 1.4rem;
+    color: var(--header-color);
+    margin-bottom: 10px;
+  }
+  
+  .author-bio-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  
+  .related-articles-list {
+    margin-top: 15px;
+  }
+  
+  .related-article {
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .related-article:last-child {
+    border-bottom: none;
+  }
+  
+  .related-article img {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .related-article h4 {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    line-height: 1.4;
+  }
+  
+  .article-date-small {
+    font-size: 0.8rem;
+    color: #777;
+  }
+  
+  .category-list {
+    list-style: none;
+  }
+  
+  .category-list li {
+    border-bottom: 1px solid #eee;
+    padding: 8px 0;
+  }
+  
+  .category-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .category-list a {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    transition: color 0.3s;
+  }
+  
+  .category-list a:hover {
+    color: var(--primary-color);
+  }
+  
+  .category-list span {
+    color: #888;
+    font-size: 0.85rem;
+  }
+  
+  .more-articles {
+    background-color: #f8f8f8;
+    padding: 60px 0;
+  }
+  
+  @media (max-width: 992px) {
+    .article-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .article-header h1 {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .article-author-bio {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .article-author-bio img {
+      margin: 0 auto 20px;
+    }
+  
+    .article-text h2 {
+      font-size: 1.6rem;
+    }
+  
+    .article-text h3 {
+      font-size: 1.3rem;
+    }
+  
+    .article-header {
+      padding: 40px 0 20px;
+    }
+  }
+  
